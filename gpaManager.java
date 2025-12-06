@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class GPAManager {
 
-    // Max number of courses the student can enter
+    // I maxed out the number of classes the student can enter to 50 classes (who takes 50 classes???)
     public static final int MAX = 50;
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        // Arrays to store course data
+        // arrays used to store course data
         String[] courseNames = new String[MAX];
         int[] creditHours = new int[MAX];
         String[] letterGrades = new String[MAX];
@@ -53,9 +53,9 @@ public class GPAManager {
         input.close();
     }
 
-    // ------------------- MENU ---------------------
+    //the menu portion
     public static void printMenu() {
-        System.out.println("\n===== GPA MANAGER MENU =====");
+        System.out.println("\n GPA MANAGER MENU ");
         System.out.println("1. Add a Course");
         System.out.println("2. List Courses");
         System.out.println("3. Compute GPA");
@@ -63,7 +63,7 @@ public class GPAManager {
         System.out.print("Enter choice: ");
     }
 
-    // ------------------- OPTION 1: ADD COURSE ---------------------
+    //Option 1: add course
     public static int addCourse(Scanner input, String[] names, int[] credits, String[] grades, int count) {
         System.out.print("Enter course name: ");
         names[count] = input.nextLine();
@@ -79,7 +79,7 @@ public class GPAManager {
         return count + 1;
     }
 
-    // ------------------- OPTION 2: LIST COURSES ---------------------
+    //option 2 list courses
     public static void listCourses(String[] names, int[] credits, String[] grades, int count) {
 
         if (count == 0) {
@@ -95,7 +95,7 @@ public class GPAManager {
         }
     }
 
-    // ------------------- OPTION 3: COMPUTE GPA ---------------------
+    //option 3 gpa
     public static void computeGPA(int[] credits, String[] grades, int count) {
 
         if (count == 0) {
@@ -116,7 +116,7 @@ public class GPAManager {
         System.out.printf("Your GPA is: %.2f\n", gpa);
     }
 
-    // ------------------- HELPER: CONVERT LETTER GRADE ---------------------
+    // THis part coverts the letter grade
     public static double convertLetterToPoints(String grade) {
         switch (grade) {
             case "A": return 4.0;
