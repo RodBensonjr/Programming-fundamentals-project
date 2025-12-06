@@ -87,7 +87,7 @@ public class gpaManager {
             return;
         }
 
-        System.out.println("\n----- COURSE LIST -----");
+        System.out.println("\nCOURSE LIST");
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ". " + names[i] +
                     " | Credits: " + credits[i] +
