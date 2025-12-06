@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GPAManager {
+public class gpaManager {
 
     // I maxed out the number of classes the student can enter to 50 classes (who takes 50 classes???)
     public static final int MAX = 50;
@@ -55,7 +55,7 @@ public class GPAManager {
 
     //the menu portion
     public static void printMenu() {
-        System.out.println("\n GPA MANAGER MENU ");
+        System.out.println("\n GPA MANAGER MENU :p ");
         System.out.println("1. Add a Course");
         System.out.println("2. List Courses");
         System.out.println("3. Compute GPA");
